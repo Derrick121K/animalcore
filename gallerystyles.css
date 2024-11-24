@@ -1,0 +1,309 @@
+/* General Body and Layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Full-screen Video Background */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Place the video behind other elements */
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the video covers the entire screen */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2a9d8f;
+    color: white;
+}
+
+/* Logo video size adjustment */
+#logo-video video {
+    width: 20%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Hero video background */
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Header navigation links */
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Animal Gallery */
+#animal-gallery {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    font-size: 2rem;
+    margin: 0 0 20px 0;
+}
+
+.animal-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Animal Cards */
+.animal-card {
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 13, 189, 0.1);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.animal-card:hover {
+    transform: scale(1.05);
+}
+
+.animal-card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.animal-card h3 {
+    font-size: 1.4rem;
+    margin: 10px 0;
+}
+
+.animal-card p {
+    font-size: 1rem;
+    color: #12afec;
+}
+
+/* Pop-up Modal Styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    overflow: auto; /* Ensure scrolling if content overflows */
+}
+
+/* Content Box within the Modal */
+.popup-content {
+    position: relative;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%; /* Adjust width */
+    max-width: 900px; /* Max width for large screens */
+    text-align: left; /* Align text to left for better readability */
+    color: white; /* White text for better contrast */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    justify-content: space-between;
+    max-height: 80vh; /* Allow scrolling if content exceeds the modal height */
+}
+
+/* Animal Image Styling */
+#animal-popup img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Add space below the image */
+}
+
+/* Title Styling */
+#animal-name {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Animal Information */
+#animal-species,
+#animal-location,
+#animal-food,
+#animal-cause {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+/* YouTube Video */
+#animal-video-frame {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+/* Button Styling */
+button {
+    background-color: #2a9d8f;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 250px;
+    margin-top: 15px; /* Add spacing before button */
+    align-self: center;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #1f7c6a;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .popup-content {
+        width: 90%; /* Use more screen space on smaller screens */
+        padding: 10px;
+    }
+
+    #animal-popup img {
+        width: 80%;
+    }
+
+    #animal-name {
+        font-size: 1.5rem; /* Adjust title size on smaller screens */
+    }
+
+    #animal-species,
+    #animal-location,
+    #animal-food,
+    #animal-cause {
+        font-size: 0.9rem; /* Smaller text on mobile for better fit */
+    }
+
+    #animal-video-frame {
+        height: 200px; /* Adjust video height for smaller screens */
+    }
+
+    button {
+        width: 100%; /* Ensure the button stretches to fit the screen width */
+    }
+}
+
+
+
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2a9d8f;
+    color: white;
+}
+
+/* Responsiveness */
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #logo-video video {
+        width: 40%; /* Increase logo size on smaller screens */
+    }
+
+    .animal-cards {
+        flex-direction: column; /* Stack cards vertically on mobile */
+    }
+
+    .animal-card {
+        width: 100%; /* Full width for cards on smaller screens */
+        margin-bottom: 20px;
+    }
+
+    h1, h2 {
+        font-size: 1.5rem; /* Reduce font size on smaller screens */
+    }
+}
+
+/* Tablets and Small Desktops */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #logo-video video {
+        width: 30%; /* Moderate size for tablets */
+    }
+
+    .animal-card {
+        width: 45%; /* Two cards per row on tablets */
+    }
+
+    h1, h2 {
+        font-size: 1.8rem; /* Adjust heading font size */
+    }
+}
+
+/* Large Screens (Desktops) */
+@media (min-width: 1025px) {
+    .animal-card {
+        width: 250px; /* Maintain standard card size on larger screens */
+    }
+
+    .animal-cards {
+        justify-content: flex-start; /* Align cards to the left for larger screens */
+    }
+}

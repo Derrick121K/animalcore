@@ -1,0 +1,313 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #a8e0cf, #f7f9fc);
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2a9d8f;
+    color: white;
+}
+
+
+
+#logo-video video {
+    width: 20%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+#hero {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+    overflow: hidden;
+}
+
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+#hero .content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Profile Button Styling */
+.Profile {
+    background-color: #2a9d8f; /* Green background */
+    color: white;              /* White text */
+    padding: 12px 25px;        /* Add padding for better clickability */
+    font-size: 1rem;           /* Set a readable font size */
+    border: none;              /* Remove default border */
+    border-radius: 5px;        /* Rounded corners for a sleek look */
+    cursor: pointer;          /* Indicate it's clickable */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition effects */
+    text-align: center;        /* Center text */
+    text-decoration: none;     /* Remove underline from the link (if any) */
+    display: inline-block;     /* Allow the button to behave like a block element */
+}
+
+.Profile:hover {
+    background-color: #1f7c6a; /* Darker green on hover */
+    transform: scale(1.05);     /* Slightly increase size on hover for emphasis */
+}
+
+.Profile:focus {
+    outline: none;             /* Remove the outline on focus for better aesthetics */
+    box-shadow: 0 0 5px rgba(42, 157, 143, 0.8); /* Add subtle shadow when focused */
+}
+
+
+
+.cta-button {
+    padding: 10px 20px;
+    background-color: #e76f51;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Pricing Section */
+#pricing {
+    text-align: center;
+    padding: 50px 20px;
+    
+    background-image: url('./assets/elk.jpg'); 
+}
+
+#pricing h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.plan {
+    display: inline-block;
+    width: 220px;
+    padding: 30px;
+    margin: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.plan:hover {
+    transform: scale(1.05); /* Slightly enlarge the plan card when hovered */
+}
+
+.plan h3 {
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.plan p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.get-started {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.get-started:hover {
+    background-color: #0056b3;
+}
+
+
+.animal-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.animal-card {
+    text-align: center;
+    width: 180px; /* Decrease size */
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 8px; /* Optional for rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation on hover */
+}
+
+.animal-card img {
+    width: 100%;
+    height: 150px; /* Adjust height */
+    object-fit: cover; /* Ensures images retain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth image transition */
+}
+
+.animal-card:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds shadow on hover */
+}
+
+.animal-card:hover img {
+    transform: scale(1.1); /* Zoom effect on image */
+}
+/* Adding a floating motion to the animal card */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animal-card {
+    animation: float 3s ease-in-out infinite; /* Apply floating animation */
+}
+
+
+/* Contact Section */
+#contact {
+    background-image: url('./assets/back.jpg'); 
+    background-size: cover; /* Ensure it covers the entire section */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Make the background fixed during scrolling */
+    padding: 50px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff; /* Make the text white for contrast */
+}
+
+#contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Soft shadow to make the form stand out */
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent input fields */
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#contact textarea {
+    height: 150px;
+    resize: vertical; /* Allows vertical resizing */
+}
+
+#contact button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    #contact h2 {
+        font-size: 2rem;
+    }
+
+    #contact form {
+        padding: 20px;
+    }
+
+    #contact input,
+    #contact textarea {
+        font-size: 0.9rem;
+    }
+
+    #contact button {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2a9d8f;
+    color: white;
+}
+@media (max-width: 768px) {
+    .plans {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .animal-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rare Animal Discovery</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+
+     <section id="logo-video">
+                <video autoplay loop muted>
+                    <source src="assets/logo.mp4" type="video/mp4">
+                
+                </video>
+     </section>
+            
+
+
+    
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#animals">Animals</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <div id="hero">
+            <video autoplay loop muted playsinline id="hero-video">
+                <source src="./assets/background.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="content">
+                <h1>Welcome to Rare Animal Discovery</h1>
+                <p>Explore the wonders of nature and rare species.</p>
+            </div>
+            <button class="Profile" onclick="window.location.href='loginorSignup.html'">Profile</button>
+        </div>
+        
+
+       <!-- Pricing Section with Get Started Button -->
+       <section id="pricing">
+        <h2>Choose Your Plan</h2>
+        <div class="plan" id="trial">
+            <h3>Free Trial</h3>
+            <p>Try it out for 1 month free</p>
+            <button class="get-started" onclick="goToAnimalGallery('trial')">Get Started</button>
+        </div>
+        <div class="plan" id="basic">
+            <h3>$5/month</h3>
+            <p>Access to basic features</p>
+            <button class="get-started" onclick="goToAnimalGallery('basic')">Get Started</button>
+        </div>
+        <div class="plan" id="pro">
+            <h3>$10/month</h3>
+            <p>Access to pro features</p>
+            <button class="get-started" onclick="goToAnimalGallery('pro')">Get Started</button>
+        </div>
+        <div class="plan" id="pro-plus">
+            <h3>$15/month</h3>
+            <p>Access to all features</p>
+            <button class="get-started" onclick="goToAnimalGallery('pro-plus')">Get Started</button>
+        </div>
+    </section>
+    
+
+        <!-- Animals Section -->
+        <section id="animals">
+            <h2>Rare Animals</h2>
+            <div class="animal-cards">
+                <div class="animal-card">
+                    <img src="assets/elks.png" alt="Rare Animal 1">
+                    <p>Elk</p>
+                </div>
+                <div class="animal-card">
+                    <img src="assets/Saola.jpg" alt="Very Rare Animal 1">
+                    <p>Saola</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Rare Animal Discovery. All rights reserved.</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
